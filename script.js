@@ -188,8 +188,3 @@ function hasEmptyTile() {
     return false;
 }
 
-
-
-
-
- 
