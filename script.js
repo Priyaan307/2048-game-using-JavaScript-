@@ -187,4 +187,29 @@ function hasEmptyTile() {
     }
     return false;
 }
+ 
 
+
+function setTwo() {
+    if (!hasEmptyTile()) {
+        // Game Over: No empty tiles available
+        // Display a "Game Over" alert or perform necessary actions
+        alert("Game Over! No more moves available.");
+        // You can also customize this by displaying a game over modal or performing specific game over actions.
+        return;
+    }
+
+    // Generate a new '2' tile in an available empty position
+    let found = false;
+    while (!found) {
+        let r = Math.floor(Math.random() * rows);
+        let c = Math.floor(Math.random() * columns);
+        if (board[r][c] === 0) {
+            board[r][c] = 2;
+            let tile = document.getElementById(r.toString() + "-" + c.toString());
+            tile.innerText = "2";
+            tile.classList.add("x2");
+            found = true;
+        }
+    }
+}
