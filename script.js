@@ -187,3 +187,15 @@ function hasEmptyTile() {
     }
     return false;
 }
+
+
+
+document.getElementById("newGameButton").addEventListener("click", function() {
+    resetGame();
+  });
+  
+  // Function to reset the game
+  function resetGame() {
+    // Reload the page to reset the game
+    location.reload();
+  }
